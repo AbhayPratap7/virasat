@@ -37,6 +37,146 @@
   <link rel="preload" as="image" href="./assets/images/crimage5.webp">
   <link rel="preload" as="image" href="./assets/images/crimage3.png">
 
+  <style>
+    /* Additional styles for the travel section */
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+        }
+        .travel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px 50px;
+    /* Change background image and its properties */
+    background-image: url('./assets/images/bg3.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Other styles remain the same */
+    border: 5px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    border-radius: 15px;
+}
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 100px;
+        }
+        .text-content {
+            flex: 1;
+            max-width: 50%;
+        }
+        .text-content p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .text-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .text-content h2 span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .text-content p.subtitle {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: #888;
+        }
+        .image-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-left: 50px;
+            margin-bottom: 20px;
+        }
+        .image-content img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        .cards-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .card {
+            flex: 0 0 30%;
+            padding: 10px;
+            height: 60px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card.blue {
+            background-color: #d8e7f5;
+        }
+        .card.yellow {
+            background-color: #e8d3b2;
+        }
+        .card.pink {
+            background-color: #f2d1d1;
+        }
+        .card p {
+            margin: 0;
+            color: black;
+            font-size: 0.9em;
+        }
+        .card .large-text {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .text-content, .image-content {
+                max-width: 100%;
+                padding: 0;
+            }
+            .text-content h2 {
+                font-size: 2em;
+            }
+            .image-content {
+                align-items: center;
+                padding: 0;
+                gap: 10px; /* Adjust gap between image and cards */
+                margin-bottom: 10px; /* Reduce margin bottom */
+            }
+            .cards-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 100%;
+            }
+            .card {
+                margin: 10px 0;
+                width: 100%;
+                box-sizing: border-box;
+                height: auto;
+            }
+            
+        }
+    </style>
+  </style>
 </head>
 
 <body id="top">
@@ -47,12 +187,8 @@
 
   <div class="preload" data-preaload>
     <div class="circle"></div>
-    <p class="text">B4Siblings</p>
+    <p class="text">Virasat Avam Vikas Sanstha</p>
   </div>
-
-
-
-
 
   <!-- 
     - #TOP BAR
@@ -102,10 +238,6 @@
     </div>
   </div>
 
-
-
-
-
   <!-- 
     - #HEADER
   -->
@@ -132,6 +264,7 @@
           <li class="navbar-item">
             <a href="index.html#home" class="navbar-link hover-underline active">
               <div class="separator"></div>
+  
               <span class="span">Home</span>
             </a>
           </li>
@@ -156,7 +289,7 @@
             <a href="sponsors.html" class="navbar-link hover-underline">
               <div class="separator"></div>
   
-              <span class="span">Our Sponsors</span>
+              <span class="span">Mentors</span>
             </a>
           </li>
   
@@ -186,10 +319,7 @@
   
         </ul>
   
-
-        </nav>
-        
-
+      </nav>
   
       <a href="#footer" class="btn btn-secondary">
         <span class="text text-1">Let's get in touch</span>
@@ -292,189 +422,46 @@
         </button>
 
       </section>
+
+      <!-- 
+        - #TRAVEL SECTION
+      -->
+
+      <section class="travel-section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p class="subtitle">✦ Travel . Discover</p>
+                <h2>
+                    <span>Find your</span>
+                    <span>Perfect place</span>
+                    <span>to experience</span>
+                    <span>the city</span>
+                </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum. Quam vel aliquam sit vulputate.</p>
+            </div>
+            <div class="image-content">
+                <img src="./assets/images/image16.jpeg" alt="Your custom image description">
+            </div>
+        </div>
+        <div class="cards-wrapper">
+            <div class="card blue">
+                <p class="large-text">351K</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card yellow">
+                <p class="large-text">99%</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card pink">
+                <p class="large-text">4.89</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
     </article>
   </main>
 
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
-
-
-
-
-
-
-
-<title>Travel Section</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .travel-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
-            background-color: #f5f5f5;
-        }
-        .content-wrapper {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: space-between;
-        }
-        .text-content {
-            flex: 1;
-            max-width: 50%;
-        }
-        .text-content p {
-            font-size: 1.2em;
-            line-height: 1.5;
-            color: #555;
-        }
-        .text-content h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: black; /* Set font color to black */
-        }
-        .text-content h2 span {
-            display: block;
-            margin-bottom: 10px; /* Add gap between lines */
-        }
-        .text-content p.subtitle {
-            font-size: 1em;
-            margin-bottom: 20px;
-            color: #888;
-        }
-        .image-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end; /* Align items to the right */
-            gap: 20px;
-            padding-left: 50px;
-        }
-        .image-content img {
-            width: 30%;
-            height: auto;
-            border-radius: 15px;
-        }
-        .cards-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-}
-.card {
-    flex: 0 0 30%; /* Adjust the width of the cards */
-    padding: 10px;
-    height: 60px; /* Adjust the height of the cards to match the image */
-    border-radius: 15px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card.blue {
-    background-color: #d8e7f5;
-}
-.card.yellow {
-    background-color: #e8d3b2;
-}
-.card.pink {
-    background-color: #f2d1d1;
-}
-.card p {
-    margin: 0;
-    color: black; /* Set the font color to black */
-    font-size: 0.9em; /* Adjust the font size if needed */
-}
-.card .large-text {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-@media (max-width: 768px) {
-    .cards-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-            .content-wrapper {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .text-content, .image-content {
-                max-width: 100%;
-                padding: 0;
-            }
-            .text-content h2 {
-                font-size: 2em;
-            }
-            .image-content img {
-                width: 70%;
-            }
-            .cards-wrapper {
-                flex-direction: column;
-                align-items: flex-start; /* Align items to the left */
-                max-width: 100%;
-            }
-            .card {
-                margin: 10px 0;
-                width: 100%;
-                box-sizing: border-box;
-                height: quto; /* Ensure the height is flexible on smaller screens */
-            }
-        }
-    </style>
-</head>
-<body>
-
-<section class="travel-section">
-    <div class="content-wrapper">
-        <div class="text-content">
-            <p class="subtitle">✦ Travel . Discover</p>
-            <h2>
-                <span>Find your</span>
-                <span>Perfect place</span>
-                <span>to experience</span>
-                <span>the city</span>
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum. Quam vel aliquam sit vulputate.</p>
-        </div>
-        
-        <img src="./assets/images/image16.jpeg" alt="Your custom image description" style="width: 30%; margin-bottom: 20px; margin-left: auto;">
-        
-        
-        <div class="image-content">
-            <img src="./assets/images/image13.webp" alt="Image 1">
-            <img src="./assets/images/image16.jpeg" alt="Image 2">
-            <img src="./assets/images/image18.webp" alt="Image 3">
-        </div>
-    </div>
-    <div class="cards-wrapper">
-        <div class="card blue">
-            <p class="large-text">351K</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card yellow">
-            <p class="large-text">99%</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card pink">
-            <p class="large-text">4.89</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-</section>
-
-</body>
-
-
- <!-- 
+  <!-- 
     - #FOOTER
   -->
 
@@ -530,10 +517,6 @@
           <li>
             <a href="#footer" class="label-2 footer-link hover-underline" style="color: black;">Contact</a>
           </li>
-
-        
-
-          
 
         </ul>
 
