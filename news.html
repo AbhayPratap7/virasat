@@ -190,10 +190,6 @@ body {
   max-height: 80%;
 }
 
-.lightbox:target {
-  display: flex;
-}
-
 .back-link {
   position: absolute;
   top: 10px;
@@ -202,6 +198,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2em;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -223,83 +220,87 @@ body {
         <div class="container">
           <h2 class="section-title" style="color: black;">Memories</h2>
           <div class="gallery-grid">
-            <a href="#img1" class="gallery-item">
+            <div class="gallery-item" data-lightbox-target="img1">
               <img src="./assets/images/news1.jpeg" loading="lazy" alt="Gallery Image 1">
               <p class="sub-heading">Subheading 1</p>
-            </a>
-            <a href="#img2" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img2">
               <img src="./assets/images/news2.jpeg" loading="lazy" alt="Gallery Image 2">
               <p class="sub-heading">Subheading 2</p>
-            </a>
-            <a href="#img3" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img3">
               <img src="./assets/images/news3.jpeg" loading="lazy" alt="Gallery Image 3">
               <p class="sub-heading">Subheading 3</p>
-            </a>
-            <a href="#img4" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img4">
               <img src="./assets/images/news4.jpeg" loading="lazy" alt="Gallery Image 4">
               <p class="sub-heading">Subheading 4</p>
-            </a>
-            <a href="#img5" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img5">
               <img src="./assets/images/memory1.jpeg" loading="lazy" alt="Gallery Image 5">
               <p class="sub-heading">Subheading 5</p>
-            </a>
-            <a href="#img6" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img6">
               <img src="./assets/images/memory2.jpeg" loading="lazy" alt="Gallery Image 6">
               <p class="sub-heading">Subheading 6</p>
-            </a>
-            <a href="#img7" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img7">
               <img src="./assets/images/memory3.jpeg" loading="lazy" alt="Gallery Image 7">
               <p class="sub-heading">Subheading 7</p>
-            </a>
-            <a href="#img8" class="gallery-item">
+            </div>
+            <div class="gallery-item" data-lightbox-target="img8">
               <img src="./assets/images/memory4.jpeg" loading="lazy" alt="Gallery Image 8">
               <p class="sub-heading">Subheading 8</p>
-            </a>
-            <a href="#img9" class="gallery-item">
-              <video src="./assets/images/memoryvideo1.mp4" controls></video>
+            </div>
+            <div class="gallery-item" data-lightbox-target="img9">
+              <video controls>
+                <source src="./assets/images/memoryvideo1.mp4" type="video/mp4">
+                <source src="./assets/images/memoryvideo1.webm.mp4" type="video/webm">
+                <source src="./assets/images/memoryvideo1.ogv.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
               <p class="sub-heading">Subheading 9</p>
-            </a>
+            </div>
           </div>
         </div>
 
         <div id="img1" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/news1.jpeg" alt="Gallery Image 1">
         </div>
         <div id="img2" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/news2.jpeg" alt="Gallery Image 2">
         </div>
         <div id="img3" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/news3.jpeg" alt="Gallery Image 3">
         </div>
         <div id="img4" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/news4.jpeg" alt="Gallery Image 4">
         </div>
         <div id="img5" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/memory1.jpeg" alt="Gallery Image 5">
         </div>
         <div id="img6" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/memory2.jpeg" alt="Gallery Image 6">
         </div>
         <div id="img7" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/memory3.jpeg" alt="Gallery Image 7">
         </div>
         <div id="img8" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <img src="./assets/images/memory4.jpeg" alt="Gallery Image 8">
         </div>
         <div id="img9" class="lightbox">
-          <a href="#" class="back-link">&larr; Back</a>
+          <span class="back-link">&larr; Back</span>
           <video src="./assets/images/memoryvideo1.mp4" controls></video>
         </div>
       </section>
-          
 
 
 
@@ -439,6 +440,22 @@ body {
   lightboxVideos.forEach(video => {
     video.addEventListener('click', () => {
       video.muted = false;
+    });
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const lightboxId = this.getAttribute('data-lightbox-target');
+      document.getElementById(lightboxId).style.display = 'flex';
+    });
+  });
+
+  document.querySelectorAll('.back-link').forEach(link => {
+    link.addEventListener('click', function() {
+      this.parentElement.style.display = 'none';
     });
   });
 </script>
