@@ -566,79 +566,95 @@
         - #FEATURES
       -->
 
+      <style>
+        .image-container {
+          display: flex;           /* Use flexbox for flexible layout */
+          justify-content: center; /* Center-align items horizontally */
+          align-items: center;     /* Center-align items vertically */
+          gap: 100px;              /* Increase spacing between images */
+          margin-top: 20px;        /* Optional: Add margin to the top of the container */
+          margin-bottom: 20px;     /* Optional: Add margin to the bottom of the container */
+          flex-wrap: wrap;         /* Allow items to wrap to the next line */
+        }
+        
+        .image-container img {
+          width: 150px;            /* Set width of each image */
+          height: 250px;           /* Set height of each image */
+          object-fit: cover;       /* Ensure images maintain aspect ratio and cover their container */
+          border-radius: 8px;      /* Optional: Add border radius for rounded corners */
+        }
+        
+        .image-text {
+          text-align: center;      /* Center-align the text */
+          margin-top: 10px;        /* Optional: Add margin above the text */
+        }
+    
+        @media (max-width: 1200px) {
+          .image-container {
+            gap: 50px;             /* Reduce spacing between images */
+          }
+        }
+    
+        @media (max-width: 768px) {
+          .image-container {
+            gap: 30px;             /* Further reduce spacing between images */
+          }
+    
+          .image-container img {
+            width: 120px;          /* Reduce image width */
+            height: 200px;         /* Reduce image height */
+          }
+        }
+    
+        @media (max-width: 480px) {
+          .image-container {
+            gap: 10px;             /* Further reduce spacing between images */
+            flex-direction: column; /* Stack images vertically */
+          }
+    
+          .image-container img {
+            width: 100px;          /* Further reduce image width */
+            height: 150px;         /* Further reduce image height */
+          }
+    
+          .image-text {
+            font-size: 14px;       /* Reduce font size for text */
+          }
+        }
+      </style>
+    </head>
+    <body id="top">
       <section class="section features text-center" aria-label="features" style="background-color: white; color: black;">
         <div class="container">
-      
           <p class="section-subtitle label-2" style="color: black;">Members of Organization</p>
-      
           <h2 class="headline-1 section-title">Our Strength</h2>
-      
-          <ul class="grid-list">
-      
-            <li class="feature-item">
-              <div class="feature-card">
-      
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-      
-                <h3 class="title-2 card-title">Hygienic Food</h3>
-      
-                <p class="label-1 card-text">For us cleanliness is next to godliness.</p>
-      
-              </div>
-            </li>
-      
-            <li class="feature-item">
-              <div class="feature-card">
-      
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-      
-                <h3 class="title-2 card-title">Fresh Environment</h3>
-      
-                <p class="label-1 card-text">Enjoy the fresh nature here with us.</p>
-      
-              </div>
-            </li>
-      
-            <li class="feature-item">
-              <div class="feature-card">
-      
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-      
-                <h3 class="title-2 card-title">Skilled Chefs</h3>
-      
-                <p class="label-1 card-text">Our chefs are exceptionally talented.</p>
-      
-              </div>
-            </li>
-      
-            <li class="feature-item">
-              <div class="feature-card">
-      
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-      
-                <h3 class="title-2 card-title">Event & Party</h3>
-      
-                <p class="label-1 card-text">Come celebrate your special day with us.</p>
-      
-              </div>
-            </li>
-      
-          </ul>
-      
-          
-      
+          <div class="image-container">
+            <div class="image-item">
+              <img src="./assets/images/main.png" loading="lazy" alt="पवन पटवारी">
+              <div class="image-text">पवन पटवारी</div>
+              <div class="image-text image-text-bold">(कोषाध्यक्ष)</div>
+            </div>
+            <div class="image-item">
+              <img src="./assets/images/organiser2.png" loading="lazy" alt="श्री बंसतीलाल जी मेहता">
+              <div class="image-text">श्री बंसतीलाल जी मेहता</div>
+              <div class="image-text image-text-bold">(अध्यक्ष)</div>
+            </div>
+            <div class="image-item">
+              <img src="./assets/images/organiser3.png" loading="lazy" alt="अरविंद जी भट्ट">
+              <div class="image-text">अरविंद जी भट्ट</div>
+              <div class="image-text image-text-bold">(सचिव)</div>
+            </div>
+            <div class="image-item">
+              <img src="./assets/images/organiser.png" loading="lazy" alt="श्री राम स्वरूप जी वर्मा">
+              <div class="image-text">श्री राम स्वरूप जी वर्मा</div>
+              <div class="image-text image-text-bold">(वरिष्ठ सलाहकार)</div>
+            </div>
+          </div>
           <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape" class="shape shape-2">
-      
         </div>
       </section>
+    
+    
       
 
 
