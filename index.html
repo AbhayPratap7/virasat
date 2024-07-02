@@ -334,7 +334,7 @@
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     overflow: hidden;
   }
-  .video-section video {
+  .video-section iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -342,12 +342,10 @@
     height: 100%;
   }
 </style>
-
+</head>
+<body>
 <section class="video-section" aria-label="promotional video">
-  <video id="promoVideo" loop>
-    <source src="./assets/images/intro1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <iframe id="promoVideo" src="https://drive.google.com/file/d/1gPmZEt2bLhpSvCH3elVXFCI5amXvCuF0/preview" allow="autoplay"></iframe>
 </section>
 
 
@@ -912,23 +910,13 @@ video.muted = false;
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById("promoVideo");
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('promoVideo');
     
-    // Manual pause/play control
-    video.addEventListener("click", function() {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-
-    // Intersection Observer for auto play/pause
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          video.play();
+          video.play().catch(e => console.log("Autoplay prevented:", e));
         } else {
           video.pause();
         }
@@ -936,9 +924,21 @@ video.muted = false;
     }, { threshold: 0.5 });
 
     observer.observe(video);
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        video.pause();
+      } else {
+        if (observer) {
+          const entry = observer.takeRecords().find(record => record.target === video);
+          if (entry && entry.isIntersecting) {
+            video.play().catch(e => console.log("Autoplay prevented:", e));
+          }
+        }
+      }
+    });
   });
 </script>
-
 
 
 
