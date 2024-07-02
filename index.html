@@ -341,9 +341,22 @@
     width: 100%;
     height: 100%;
   }
+  .video-heading {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;  /* Remove vertical margin */
+    color: black;
+    background-color: white;
+    padding: 15px 10px;  /* Increase vertical padding */
+    width: 100%;  /* Ensure full width */
+    box-sizing: border-box;  /* Include padding in width calculation */
+}
 </style>
 </head>
 <body>
+  <div class="video-heading">
+    &lt; Introduction video, You must watch ☺️! /&gt;
+  </div>
 <section class="video-section" aria-label="promotional video">
   <iframe id="promoVideo" src="https://drive.google.com/file/d/1gPmZEt2bLhpSvCH3elVXFCI5amXvCuF0/preview" allow="autoplay"></iframe>
 </section>
