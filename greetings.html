@@ -385,6 +385,46 @@
             margin: 0 auto; /* Center align the images */
           }
         }
+        .letterhead-section {
+  position: relative; /* Required for absolute positioning of the arrow */
+  padding: 40px 0;
+  background-color: #ffffff; /* White background */
+}
+
+.letterhead-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.letterhead-slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 100%; /* Adjust as needed */
+}
+
+.letterhead-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure images cover the entire slide */
+}
+
+@media (min-width: 768px) {
+  .letterhead-slide img {
+    max-width: 55%; /* Reduce image size on larger screens */
+    margin: 0 auto; /* Center align the images */
+  }
+}
+
+.arrow.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  font-size: 2rem; /* Adjust size as needed */
+  color: #000; /* Adjust color as needed */
+}
+
       </style>
       
       <section class="greetings-heading text-center">
@@ -410,6 +450,9 @@
           </div>
         </div>
       </section>
+
+
+      
 
       <section class="greetings-heading text-center">
         <div class="container">
