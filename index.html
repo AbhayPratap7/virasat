@@ -114,6 +114,28 @@
         <button class="close-btn" aria-label="close menu" data-nav-toggler>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
+        <style>
+          .logo img {
+            width: 250px;
+            height: 50px;
+            transition: width 0.3s, height 0.3s; /* Smooth transition for resizing */
+          }
+        
+          /* Media query for responsive adjustments */
+          @media screen and (max-width: 768px) {
+            .logo img {
+              width: 180px; /* Adjust width for smaller screens */
+              height: auto; /* Maintain aspect ratio */
+            }
+          }
+        
+          @media screen and (max-width: 480px) {
+            .logo img {
+              width: 120px; /* Adjust width for even smaller screens */
+              height: auto; /* Maintain aspect ratio */
+            }
+          }
+        </style>
   
         <a href="#" class="logo">
           <img src="./assets/images/twohorse.png" width="250" height="50" alt="b4sibs-home">
