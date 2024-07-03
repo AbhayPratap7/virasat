@@ -292,11 +292,27 @@
         }
       
         @media screen and (max-width: 480px) {
-          .logo img {
-            width: 190px; /* Adjust width for even smaller screens */
-            height: auto; /* Maintain aspect ratio */
-          }
-        }
+  .logo img {
+    width: 150px; /* Adjust width for mobile phones */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Media query for laptops (min-width: 769px and max-width: 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .logo img {
+    width: 220px; /* Adjust width for laptops */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Media query for desktops (min-width: 1025px) */
+@media screen and (min-width: 1025px) {
+  .logo img {
+    width: 250px; /* Default width for desktops */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
       </style>
   
       <a href="#" class="logo">
