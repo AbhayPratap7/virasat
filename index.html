@@ -41,8 +41,6 @@
 </head>
 <body id="top">
 
-  
-
   <!-- 
     - #PRELOADER
   -->
@@ -100,10 +98,6 @@
     </div>
   </div>
 
-
- 
-  
-
   <!-- 
     - #HEADER
   -->
@@ -132,6 +126,14 @@
               <div class="separator"></div>
   
               <span class="span" style="color: white;">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="greetings.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+  
+              <span class="span">Greetings</span>
             </a>
           </li>
   
@@ -243,9 +245,37 @@
 
             <a href="events.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">View Our Events</span>
-
               <span class="text text-2" aria-hidden="true">View Our Events</span>
             </a>
+
+            <!-- Notification Rectangle -->
+            <style>
+              @keyframes color-change {
+                0% { color: #ff0000; }
+                20% { color: #ffa500; }
+                40% { color: rgb(192, 5, 36); }
+                60% { color: #014b01; }
+                80% { color: #04047e; }
+                100% { color: #410c68; }
+              }
+          
+              .color-animation {
+      animation: color-change 1.5s infinite; /* Faster animation */
+    }
+    /* Media query for responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .notification-rectangle {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 600px; /* Limit maximum width */
+        font-size: 14px; /* Adjust font size for smaller screens */
+      }
+    }
+            </style>
+            <div style="text-align: center;">
+                <div class="notification-rectangle slider-reveal" onclick="window.location.href='greetings.html'" style="cursor: pointer; margin: 20px auto; background-color: rgb(235, 193, 115); padding: 10px 20px; border-radius: 5px; display: inline-block; width: 600px;">
+                  <span class="span color-animation" style="font-weight: bold;">Greetings from Honourable Gulab Chand Katariya [Rajypal Assam]</span>
+                </div>
+              </div>
 
           </li>
 
@@ -268,11 +298,35 @@
 
             <a href="events.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">View Our Events</span>
-
               <span class="text text-2" aria-hidden="true">View Our Events</span>
             </a>
-            
-            
+            <style>
+              @keyframes color-change {
+                0% { color: #ff0000; }
+                20% { color: #ffa500; }
+                40% { color: rgb(192, 5, 36); }
+                60% { color: #014b01; }
+                80% { color: #04047e; }
+                100% { color: #410c68; }
+              }
+          
+              .color-animation {
+      animation: color-change 1.5s infinite; /* Faster animation */
+    }
+    /* Media query for responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .notification-rectangle {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 600px; /* Limit maximum width */
+        font-size: 14px; /* Adjust font size for smaller screens */
+      }
+    }
+            </style>
+            <div style="text-align: center;">
+                <div class="notification-rectangle slider-reveal" onclick="window.location.href='greetings.html'" style="cursor: pointer; margin: 20px auto; background-color: rgb(235, 193, 115); padding: 10px 20px; border-radius: 5px; display: inline-block; width: 600px;">
+                  <span class="span color-animation" style="font-weight: bold;">Greetings from Honourable Gulab Chand Katariya [Rajypal Assam]</span>
+                </div>
+              </div>
 
           </li>
 
@@ -282,25 +336,48 @@
               <img src="./assets/images/crimage3.png" width="1880" height="950" alt="" class="img-cover">
             </div>
 
-            <p class="label-2 section-subtitle slider-reveal">Heritage Place</p>
+            <p class="label-2 section-subtitle slider-reveal">Join & Enjoy</p>
 
             <h1 class="display-1 hero-title slider-reveal">
-              The Timeless Monument Of <br>
-                 Pride and Honor.
+              Be a part of our family. <br>
+              
             </h1>
 
             <p class="body-2 hero-text slider-reveal">
-              Padharoo Maree Deshh.
+              Get the best experience of our traditional events
             </p>
 
             <a href="events.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">View Our Events</span>
-
               <span class="text text-2" aria-hidden="true">View Our Events</span>
             </a>
-            
-           
-
+            <style>
+              @keyframes color-change {
+                0% { color: #ff0000; }
+                20% { color: #ffa500; }
+                40% { color: rgb(192, 5, 36); }
+                60% { color: #014b01; }
+                80% { color: #04047e; }
+                100% { color: #410c68; }
+              }
+          
+              .color-animation {
+      animation: color-change 1.5s infinite; /* Faster animation */
+    }
+    /* Media query for responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .notification-rectangle {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 600px; /* Limit maximum width */
+        font-size: 14px; /* Adjust font size for smaller screens */
+      }
+    }
+            </style>
+            <div style="text-align: center;">
+                <div class="notification-rectangle slider-reveal" onclick="window.location.href='greetings.html'" style="cursor: pointer; margin: 20px auto; background-color: rgb(235, 193, 115); padding: 10px 20px; border-radius: 5px; display: inline-block; width: 600px;">
+                  <span class="span color-animation" style="font-weight: bold;">Greetings from Honourable Gulab Chand Katariya [Rajypal Assam]</span>
+                </div>
+              </div>
             
 
           </li>
@@ -308,15 +385,14 @@
         </ul>
 
         <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
-          <ion-icon name="chevron-back"></ion-icon>
+          <ion-icon name="chevron-back" aria-hidden="true"></ion-icon>
         </button>
 
         <button class="slider-btn next" aria-label="slide to next" data-next-btn>
-          <ion-icon name="chevron-forward"></ion-icon>
+          <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
         </button>
 
       </section>
-
 
       
 
@@ -477,7 +553,7 @@
     
                 <p class="label-2 section-subtitle" id="about-label" style="color: black;">ABOUT US</p>
     
-                <h2 class="headline-1 section-title" style="color: black;">"विरासत एवं विकास संस्था"</h2>
+                <h2 class="headline-1 section-title" style="color: black;">"विरासत और विकास संस्थान"</h2>
     
                 <div class="section-text" style="color: black;">
                     <p>1. ऐतिहासिक धरोहर का संरक्षण और साहित्य का ध्यान रखना।</p>
@@ -523,7 +599,7 @@
   
               <p class="label-2 section-subtitle" id="about-label" style="color: black;">MORE ABOUT US</p>
   
-              <h2 class="headline-1 section-title" style="color: black;">"विरासत एवं विकास संस्था"</h2>
+              <h2 class="headline-1 section-title" style="color: black;">"विरासत और विकास संस्थान"</h2>
   
               <div class="section-text" style="color: black;">
                   <p>विरासत और विकास संस्थान का मिशन है ऐतिहासिक धरोहर का संरक्षण, साहित्य के महत्व को समझना और लोगों को इसके प्रति जागरूक करना। हम प्राचीन विरासतों की मूल्यवानता को सुनिश्चित करने के लिए प्रयासरत हैं। साथ ही, हम समाज के विकास के लिए योजनाएं बनाते हैं और उन्हें कार्यान्वित करने का प्रयास करते हैं। राज्य के कल्याणकारी योजनाओं को संचालित करना, महिलाओं और बच्चों के विकास के लिए कार्यक्रम संचालित करना, युवाओं और बेरोजगारों को प्रशिक्षित करना, ग्रामीण क्षेत्रों के कमजोर और पिछड़े लोगों के विकास के लिए प्रोत्साहन शिविर और प्रशिक्षण कार्यक्रम का आयोजन करना, अनाथाश्रम, वृद्धाश्रम, महिला छात्रावास जैसी संस्थाओं के लिए कार्यक्रम संचालित करना, और प्राकृतिक संरक्षण के लिए कार्यक्रम आयोजित करना हमारी प्रमुख उपासना है। इसके अतिरिक्त, हम शिक्षा, जनस्वास्थ्य और सामाजिक कार्यों के माध्यम से लोगों के कल्याण के लिए प्रयासरत हैं। हमारा संगठन प्रदान करता है एक सकारात्मक, मेहनती, और सहायक माहौल जो समाज के सर्वांगीण विकास के लिए प्रतिबद्ध है।</p>
